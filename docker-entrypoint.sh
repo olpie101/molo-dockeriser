@@ -44,6 +44,15 @@ serverurl=unix:///var/run/supervisor.sock ; use a unix:// URL  for a unix socket
 files = /etc/supervisor/conf.d/*.conf
 EOM
 
+# Redis
+echo "=> Creating Redis supervisor config"
+cat > /etc/supervisor/conf.d/redis.conf <<-EOM
+[program:redis]
+command = redis-server
+directory = /
+redirect_stderr = true
+EOM
+
 # App
 echo "=> Creating Tracker supervisor config"
 cat > /etc/supervisor/conf.d/app.conf <<-EOM
