@@ -1,2 +1,5 @@
 .idea/
 ve/
+Dockerfile
+*.sqlite3
+*.pyc
