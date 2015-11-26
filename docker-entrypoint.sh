@@ -2,10 +2,10 @@
 
 set -e
 
-DJANGO_SETTINGS_MODULE=tuneme.settings.dev
 SUPERVISOR_APP_NAME=$1
 APP_WSGI=$2
 APP_PORT_NUMBER=$3
+DJANGO_SETTINGS_MODULE="${APP_WSGI:0:${#APP_WSGI}-5}.settings.dev"
 
 # Create main Supervisord config file
 echo "=> Creating supervisord config"
