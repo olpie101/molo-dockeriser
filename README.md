@@ -25,8 +25,6 @@ __app-wsgi__ — reference to the *wsgi* used to start the application service
 
 The `config.ini` is already setup with an [example](https://github.com/praekelt/molo-tuneme) to help you get started.
 
-Currently an sqlite3 database with the name `db.sqlite3` is required for the Dockerfile to be successfully created. This ensures that the db has a superuser already set up. This shall be fixed in a later updated. For now a ensure the `db.sqlite3` file is present in the root directory. __NB: make sure that the database file provided has all the necessary migrations applied or :boom:!__
-
 ### Usage
 
 To create the Dockerfile simply execute

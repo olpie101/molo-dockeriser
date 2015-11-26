@@ -19,7 +19,6 @@ def main():
         .run_command('pip install supervisor') \
         .run_command('pip install --no-cache-dir -e ./deploy/') \
         .run_command('./deploy/manage.py migrate') \
-        .copy_command('db.sqlite3', './deploy/') \
         .add_command('docker-entrypoint.sh', './deploy/') \
         .run_command('chmod +x ./deploy/docker-entrypoint.sh') \
         .expose_command(config[key_container_ports]) \
